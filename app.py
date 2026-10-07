@@ -186,6 +186,29 @@ if st.button("Predict Performance"):
     )
 
     st.subheader("Prediction Result")
+    # Family relationship message
+    if famrel >= 4:
+        st.write("👨‍👩‍👧‍👦 A strong family relationship can provide emotional support and a positive environment for studying.")
+    elif famrel == 3:
+        st.write("👨‍👩‍👧‍👦 A moderate family relationship suggests a generally balanced home environment.")
+    else:
+        st.write("👨‍👩‍👧‍👦 A supportive and comfortable home environment can help students manage academic pressure.")
+
+    # Free time message
+    if freetime >= 4:
+        st.write("⏰ Having sufficient free time can help maintain a healthy balance between studies and relaxation.")
+    elif freetime == 3:
+        st.write("⏰ A balanced amount of free time can support both studying and relaxation.")
+    else:
+        st.write("⏰ Limited free time may make it harder to balance studies and relaxation. Consider taking regular breaks.")
+
+    # Health message
+    if health >= 4:
+        st.write("❤️ Maintaining good health can support concentration, energy and regular study habits.")
+    elif health == 3:
+        st.write("❤️ Maintaining a balanced routine, adequate rest and healthy habits can support your studies.")
+    else:
+        st.write("❤️ Taking care of your health is important for maintaining energy and concentration while studying.")
 
     if result == "High Percentage":
         st.success("🎉 Predicted Performance: HIGH")
