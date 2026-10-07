@@ -188,14 +188,11 @@ if st.button("Predict Performance"):
 
     st.subheader("Prediction Result")
 
-    if result == "High":
-        st.success("🎉 Predicted Performance: HIGH")
-
-    elif result == "Average":
-        st.info("📚 Predicted Performance: AVERAGE")
-
-    elif result == "Low":
-        st.warning("📖 Predicted Performance: LOW")
-
-    else:
-        st.write(f"Predicted Performance: {result}")
+if result == "High Percentage":
+    st.success("🎉 Predicted Performance: HIGH")
+elif result == "Average Percentage":
+    st.info("📚 Predicted Performance: AVERAGE")
+elif result == "Low Percentage":
+    st.warning("📖 Predicted Performance: LOW")
+else:
+    st.write(f"Predicted Performance: {result}")
